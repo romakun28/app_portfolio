@@ -23,10 +23,13 @@ def send_email(message):
     host = "smtp.gmail.com"
     port = 587
 
+    user = "rontolero628@gmail.com"
+    password = "lnfsysmyzjkbpvkn"
+
     receiver = "rontolero628@gmail.com"
 
     server = smtplib.SMTP(host, port)
     server.starttls()
 
-    server.login("rontolero628@gmail.com", "lnfsysmyzjkbpvkn")
-    server.sendmail("rontolero628@gmail.com", receiver, message)
+    server.login(user=user, password=password )
+    server.sendmail(user, receiver, message)
