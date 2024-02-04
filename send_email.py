@@ -24,7 +24,8 @@ def send_email(message):
     port = 587
 
     user = "rontolero628@gmail.com"
-    password = os.environ.get("PASSWORD") 
+    password = os.getenv("PASSWORD")
+    #password = os.environ.get("PASSWORD")
 
     receiver = "rontolero628@gmail.com"
 
